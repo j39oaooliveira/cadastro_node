@@ -1,0 +1,36 @@
+### Buscar pessoa por ID (GET)
+GET http://localhost:3000/pessoas/1
+
+###
+
+### Atualizar pessoa (PUT)
+PUT http://localhost:3000/pessoas/1
+Content-Type: application/json
+
+{
+  "nome": "João Vitor Silva",
+  "data_nascimento": "2000-05-20",
+  "sexo": "M",
+  "documento": "123.456.789-00"
+}
+
+###
+
+### Atualizar endereço 1 da pessoa 1 (PUT)
+PUT http://localhost:3000/pessoas/1/enderecos/1
+Content-Type: application/json
+
+{
+  "cep": "43800-000",
+  "logradouro": "Rua Nova",
+  "numero": "250",
+  "complemento": "Apto 2",
+  "bairro": "Centro",
+  "cidade": "Candeias",
+  "estado": "BA"
+}
+
+###
+
+### Deletar endereço 1 da pessoa 1 (DELETE)
+DELETE http://localhost:3000/pessoas/1/enderecos/1
